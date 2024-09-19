@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: sp
+  security:
+    saml2:
+      relyingparty:
+        registration:
+          sp:
+            entity-id: "http://localhost:8081/saml2/service-provider-metadata"
+            assertion-consumer-service-location: "http://localhost:8081/login/saml2/sso"
+            idp-metadata-location: "http://localhost:8080/idp/metadata"
+server:
+  port: 8081  # Port for Service Provider
